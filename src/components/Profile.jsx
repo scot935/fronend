@@ -23,7 +23,7 @@ const Profile = ({ userName, email, seeProfile }) => {
   const deleteAcc = async () => {
     const userName = cookie.get("Scot_Auth-User_Data").userName;
     const deleteAcc = await fetch(
-      `https://scotbackend.onrender.com/api/users/deleteUser/${userName}`,
+      `https://server-bqsa.onrender.com/api/users/deleteUser/${userName}`,
       {
         method: "DELETE",
         headers: {

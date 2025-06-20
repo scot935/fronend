@@ -27,7 +27,7 @@ const EditPage = () => {
       setUserInfo(userInfo);
       const getUser = async () => {
         const response = await fetch(
-          `https://scotbackend.onrender.com/api/users/getSingleUser/${userInfo.userName}`
+          `https://server-bqsa.onrender.com/api/users/getSingleUser/${userInfo.userName}`
         );
         const data = await response.json();
         setResponse(data);
@@ -81,7 +81,7 @@ const EditPage = () => {
 
       try {
         const updateUser = await fetch(
-          `https://scotbackend.onrender.com/api/users/editUserAcc/${userInfo._id}`,
+          `https://server-bqsa.onrender.com/api/users/editUserAcc/${userInfo._id}`,
           {
             method: "PATCH",
             headers: {

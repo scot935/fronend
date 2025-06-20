@@ -28,7 +28,7 @@ const Chat = () => {
 
   const userData = cookies.get("Scot_Auth-User_Data");
 
-  const socket = io("https://scotbackend.onrender.com", {
+  const socket = io("https://server-bqsa.onrender.com", {
     path: "/chat",
   });
 
@@ -42,7 +42,7 @@ const Chat = () => {
 
     const fetchFreands = async () => {
       const getFreands = await fetch(
-        `https://scotbackend.onrender.com/api/users/getFreands/${userData._id}`
+        `https://server-bqsa.onrender.com/api/users/getFreands/${userData._id}`
       );
 
       const response = await getFreands.json();
@@ -90,7 +90,7 @@ const Chat = () => {
 
     try {
       const getSingleUser = await fetch(
-        `https://scotbackend.onrender.com/api/users/getSingleUser/${userName}`
+        `https://server-bqsa.onrender.com/api/users/getSingleUser/${userName}`
       );
       const response = await getSingleUser.json();
 
@@ -139,7 +139,7 @@ const Chat = () => {
 
     try {
       const deleting = await fetch(
-        `https://scotbackend.onrender.com/api/users/deleteFeand/${freandUserName}`,
+        `https://server-bqsa.onrender.com/api/users/deleteFeand/${freandUserName}`,
         {
           method: "DELETE",
           headers: {
@@ -157,7 +157,7 @@ const Chat = () => {
 
         const fetchFreands = async () => {
           const getFreands = await fetch(
-            `https://scotbackend.onrender.com/api/users/getFreands/${userData._id}`
+            `https://server-bqsa.onrender.com/api/users/getFreands/${userData._id}`
           );
 
           const response = await getFreands.json();

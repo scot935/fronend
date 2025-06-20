@@ -48,7 +48,7 @@ const Form = ({ forSingUp }) => {
         };
 
         const createAccount = await fetch(
-          "https://scotbackend.onrender.com/api/users/register",
+          "https://server-bqsa.onrender.com/api/users/register",
           {
             method: "POST",
             headers: {
@@ -90,7 +90,7 @@ const Form = ({ forSingUp }) => {
         };
 
         const login = await fetch(
-          "https://scotbackend.onrender.com/api/users/login",
+          "https://server-bqsa.onrender.com/api/users/login",
           {
             method: "POST",
             headers: {

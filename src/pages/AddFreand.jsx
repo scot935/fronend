@@ -20,7 +20,7 @@ const AddFreand = () => {
       const userName = userData.userName;
       try {
         const getSingleUser = await fetch(
-          `https://scotbackend.onrender.com/api/users/getSingleUser/${userName}`
+          `https://server-bqsa.onrender.com/api/users/getSingleUser/${userName}`
         );
         const response = await getSingleUser.json();
 
@@ -29,7 +29,7 @@ const AddFreand = () => {
             const getAllContacts = async () => {
               try {
                 const getContacts = await fetch(
-                  `https://scotbackend.onrender.com/api/users/getAllUsers/${userData.userName}`
+                  `https://server-bqsa.onrender.com/api/users/getAllUsers/${userData.userName}`
                 );
                 const response = await getContacts.json();
                 setAllUsers(response.getUsers);
@@ -43,7 +43,7 @@ const AddFreand = () => {
             const getNonFreands = async () => {
               try {
                 const nonFreands = await fetch(
-                  `https://scotbackend.onrender.com/api/users/getUnknownPeople/${userData._id}`
+                  `https://server-bqsa.onrender.com/api/users/getUnknownPeople/${userData._id}`
                 );
                 const response = await nonFreands.json();
 
@@ -68,7 +68,7 @@ const AddFreand = () => {
     const data = { user: userData._id };
     try {
       const addFriend = await fetch(
-        `https://scotbackend.onrender.com/api/users/addFeand/${id}`,
+        `https://server-bqsa.onrender.com/api/users/addFeand/${id}`,
         {
           method: "POST",
           headers: {
